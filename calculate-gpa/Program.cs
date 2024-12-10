@@ -13,12 +13,13 @@ int course5Credit = 3;
 
 int gradeA = 4;
 int gradeB = 3;
+int gradeC = 2;
 
 int course1Grade = gradeA;
 int course2Grade = gradeB;
 int course3Grade = gradeB;
 int course4Grade = gradeB;
-int course5Grade = gradeA;
+int course5Grade = gradeC;
 
 int totalCreditHours = 0;
 totalCreditHours += course1Credit;
@@ -39,6 +40,8 @@ decimal gradePointAverage = (decimal) totalGradePoints/totalCreditHours;
 int leadingDigit = (int) gradePointAverage;
 int firstDigit = (int) (gradePointAverage * 10 ) % 10;
 int secondDigit = (int) (gradePointAverage * 100 ) % 10;
+
+Console.WriteLine($"{studentName}'s Grades and GPA:");
 
 Console.WriteLine($"{course1Name} {course1Grade} {course1Credit}");
 Console.WriteLine($"{course2Name} {course2Grade} {course2Credit}");
