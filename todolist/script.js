@@ -55,11 +55,12 @@ function addTask(task) {
 
     editButton.addEventListener('click', function () {
         const isEditing = listItem.classList.contains('editing');
-
         if (isEditing) {
-            taskText.textContent = this.previousSibling.value;
+            const input = listItem.querySelector('input[type="text"]');
+            taskText.textContent = input.value;
+            listItem.replaceChild(taskText, input);
             listItem.classList.remove('editing');
-            editButton.textContent = 'Edit';
+            editbutton.textContent = 'Edit';
         } else {
             const input = document.createElement('input');
             input.type = 'text';
@@ -70,7 +71,7 @@ function addTask(task) {
             editButton.textContent = 'Save';
         }
     });
-
+    
     saveTasksToLocalStorage();
 }
 
