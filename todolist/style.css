@@ -46,9 +46,9 @@ body {
 #todo-list {
     list-style: none;
     padding: 0;
-  }
-  
-  #todo-list li {
+}
+
+#todo-list li {
     background-color: #f9f9f9;
     margin-top: 10px;
     padding: 10px;
@@ -56,4 +56,4 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
+}
